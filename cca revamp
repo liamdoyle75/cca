@@ -8,6 +8,8 @@ x = 0
 
 s = 0
 
+#13 to 90 is tally points to make sure the password is secure
+
 def uID():
     
     s = 0
@@ -90,10 +92,12 @@ def uID():
     dict1[ID] = password
     return password
 
+#Changing password
+
 def change(uID,password,x):
     while True:
 
-        b = input('Enter pre-excisting user ID: ')
+        b = input('Enter pre-excisting user ID: ') #new ID
 
         file = open('passwords1.csv','r')
         if b in dict1:
@@ -109,7 +113,7 @@ def change(uID,password,x):
             break
 
         else:
-            print('This is not a user ID that was used')
+            print('This is not a user ID that was used') 
         
 file = open('passwords1.csv','w')
 file.close()
